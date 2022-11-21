@@ -10,7 +10,7 @@ ITEM_PIPELINES = {
 }
 
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    'pep_parse/results/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
         'overwrite': True
