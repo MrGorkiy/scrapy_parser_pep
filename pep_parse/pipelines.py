@@ -1,16 +1,11 @@
 import csv
-import datetime as dt
-from pathlib import Path
 
-BASE_DIR = Path(__file__).parent.parent
-
+from pep_parse.constants import FILE_DIR, FIELDS_NAME
 
 class PepParsePipeline:
     def open_spider(self, spider):
-        """Формирование пути до директории results."""
+        """Создание словаря для подсчета."""
         self.results = {}
-        self.RESULTS_DIR = BASE_DIR / 'results'
-        self.RESULTS_DIR.mkdir(exist_ok=True)
 
     def process_item(self, item, spider):
         """Подсчет количества статусов."""
@@ -22,10 +17,6 @@ class PepParsePipeline:
         return item
 
     def close_spider(self, spider):
-        FIELDS_NAME = ('Статус', 'Количество')
-        TIME_NOW = dt.datetime.now().strftime('%Y-%m-%dT%H-%M-%S')
-        FILE_DIR = self.RESULTS_DIR / 'status_summary_{time}.csv'.format(
-            time=TIME_NOW)
         with open(FILE_DIR, mode='w', encoding='utf-8') as f:
             writer = csv.writer(f, dialect='unix')
             writer.writerow((FIELDS_NAME))
