@@ -2,6 +2,7 @@ import csv
 
 from pep_parse.constants import FILE_DIR, FIELDS_NAME
 
+
 class PepParsePipeline:
     def open_spider(self, spider):
         """Создание словаря для подсчета."""
