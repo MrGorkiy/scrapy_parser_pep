@@ -31,7 +31,6 @@ class PepParsePipeline:
 
     def close_spider(self, spider):
         """Запись данных в файл."""
-
         file_dir = self.result_dir / FILE_NAME.format(
             time=TIME_NOW)
         with open(file_dir, mode='w', encoding='utf-8') as f:

@@ -16,7 +16,6 @@ class PepParseBase:
 
 
 class PepParseSpiderMiddleware(PepParseBase):
-
     def process_spider_input(self, response, spider):
         return None
 
@@ -30,7 +29,6 @@ class PepParseSpiderMiddleware(PepParseBase):
 
 
 class PepParseDownloaderMiddleware(PepParseBase):
-
     def process_request(self, request, spider):
         return None
 
