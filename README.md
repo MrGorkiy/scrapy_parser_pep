@@ -1,4 +1,6 @@
 # Scrapy Parser PEP
+[![Python](https://img.shields.io/badge/-Python-464646?style=flat&logo=Python&logoColor=ffffff&color=043A6B)](https://www.python.org/)
+[![Scrapy](https://img.shields.io/badge/-Scrapy-464646?style=flat&logo=Scrapy&logoColor=ffffff&color=043A6B)](https://www.djangoproject.com/)
 
 ## Парсинг документов PEP
 Асинхронный парсер собирающий данные о Python Enhancement Proposals (PEP) с сайта `https://www.python.org/`.
