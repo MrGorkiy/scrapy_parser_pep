@@ -18,9 +18,6 @@ class PepSpider(scrapy.Spider):
 
     def parse_pep(self, response):
         title = response.css('h1.page-title::text').get().split(' – ')
-        # наверное что-то с кодировкой в практикуме,
-        # это знак тире скопированный со страницы документации,
-        # в IDE отображается нормально
         data = {
             'number': title[0][4:],
             'name': title[1],

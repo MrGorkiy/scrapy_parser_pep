@@ -2,8 +2,6 @@ import csv
 import datetime as dt
 from pathlib import Path
 
-# При попытке вынести все константы в отдельный файл, заваливаются тесты,
-# но функциональность полностью сохраняется
 BASE_DIR = Path(__file__).parent.parent
 
 FIELDS_NAME = ('Статус', 'Количество')
